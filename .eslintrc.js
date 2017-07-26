@@ -4,7 +4,10 @@ module.exports = {
     ecmaVersion: 2017,
     sourceType: 'module'
   },
-  extends: 'eslint:recommended',
+  extends: [
+    'plugin:ember-suave/recommended',
+    'standard'
+  ],
   env: {
     browser: true
   },
