@@ -1,6 +1,6 @@
 {
   "name": "ember-exif",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Parse exif data from images and add it to the application as a importable module.",
   "keywords": [
     "ember-addon"
