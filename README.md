@@ -1,26 +1,41 @@
-# ember-exif
+ember-exif
+==========
 
-This README outlines the details of collaborating on this Ember addon.
+*This add-on is currently an experiment and under development.*
 
-## Installation
+The goal of this add-on is to read the exif data from photos in your Ember app and make them available as data to the app itself through an ES6 module that can be imported. This could be useful to photo portfolios or other sites where displaying image metadata would be valuable.
 
-* `git clone <repository-url>` this repository
-* `cd ember-exif`
-* `npm install`
+Configuration
+-------------
 
-## Running
+`ember-cli-build.js`
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```javascript
+module.exports = function(defaults) {
+  const app = new EmberApp(defaults, {
+    exifOptions: {
+      paths: ['public/photos'],
+      output: {
+        log: true
+      }
+    }
+  });
+```
 
-## Running Tests
+Usage
+-----
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+From somewhere in your application:
 
-## Building
+```javascript
+import photoData from 'photos/image-manifest'
+import { wrap } from 'ember-array/utils'
 
-* `ember build`
+export default Component.extend({
+  init(...args) {
+    this._super(...args);
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+    this.set('photoNamesList', wrap(photoData.data).mapBy('RawFileName'))
+  }
+})
+```
