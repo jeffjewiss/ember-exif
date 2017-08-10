@@ -2,22 +2,29 @@
   "name": "ember-exif",
   "version": "0.0.1",
   "description": "Parse exif data from images and add it to the application as a importable module.",
-  "keywords": [
-    "ember-addon"
-  ],
-  "license": "MIT",
-  "author": "",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each",
     "lint": "eslint app addon blueprints config server test-support tests *.js"
   },
+  "engines": {
+    "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffjewiss/ember-exif"
+  },
+  "bugs": {
+    "url": "https://github.com/jeffjewiss/ember-exif/issues"
+  },
+  "homepage": "https://github.com/jeffjewiss/ember-exif",
+  "author": "Jeff Jewiss <jeffjewiss@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "broccoli-funnel": "1.2.0",
     "broccoli-merge-trees": "2.0.0",
@@ -28,6 +35,12 @@
     "node-exiftool": "2.2.0",
     "prettyjson": "1.2.1"
   },
+  "keywords": [
+    "ember-addon",
+    "exif",
+    "image",
+    "photo"
+  ],
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
