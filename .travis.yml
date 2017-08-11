@@ -1,9 +1,15 @@
----
+sudo: false
+dist: trusty
+
+addons:
+  chrome: stable
+
 language: node_js
 node_js:
+  - "4"
   - "6"
-
-sudo: false
+  - "7"
+  - "8"
 
 cache:
   directories:
@@ -25,13 +31,16 @@ matrix:
 
 before_install:
   - npm config set spin false
+  - npm install -g yarn
   - npm install -g phantomjs-prebuilt
   - phantomjs --version
+  - yarn global add greenkeeper-lockfile@1
 
 install:
-  - npm install
+  - yarn
 
 script:
   # Usually, it's ok to finish the test scenario without reverting
   #  to the addon's original dependency state, skipping "cleanup".
+  - npm run lint
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
