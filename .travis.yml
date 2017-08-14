@@ -34,6 +34,7 @@ before_install:
   - npm install -g phantomjs-prebuilt
   - phantomjs --version
   - yarn global add greenkeeper-lockfile@1
+  - yarn global add bower
 
 install:
   - yarn
