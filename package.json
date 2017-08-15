@@ -31,7 +31,7 @@
     "broccoli-merge-trees": "2.0.0",
     "broccoli-plugin": "1.3.0",
     "dist-exiftool": "10.53.0",
-    "ember-cli-babel": "6.7.2",
+    "ember-cli-babel": "6.8.0",
     "merge": "1.2.0",
     "node-exiftool": "2.2.0",
     "prettyjson": "1.2.1"
