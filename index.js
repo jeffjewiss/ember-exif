@@ -13,12 +13,9 @@ module.exports = {
   included (app) {
     this._super.included.apply(this, arguments)
 
-    let { project: { ui } } = app
-
     this.exifOptions = merge.recursive({}, {
       enabled: true,
       paths: ['public'],
-      logger: ui,
       output: {
         manifest: true,
         log: false,
@@ -32,9 +29,6 @@ module.exports = {
   },
 
   getImagePaths () {
-    if (this.isDevelopingAddon()) {
-      return ['tests/dummy/public']
-    }
     return this.exifOptions.paths
   },
 
