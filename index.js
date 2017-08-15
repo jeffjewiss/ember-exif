@@ -32,7 +32,8 @@ module.exports = {
     return this.exifOptions.paths
   },
 
-  treeForApp (tree) {
+  treeForApp () {
+    let appTree = this.app.trees.app
     let existingPaths = this.getImagePaths()
       .filter((path) => fs.existsSync(path))
 
@@ -46,6 +47,6 @@ module.exports = {
 
     let manifestTree = new ExifPlugin(imageNodes, this.exifOptions)
 
-    return mergeTrees([tree, manifestTree])
+    return mergeTrees([appTree, manifestTree])
   }
 }
