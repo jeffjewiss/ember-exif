@@ -16,6 +16,8 @@ module.exports = {
     this.exifOptions = merge.recursive({}, {
       enabled: true,
       paths: ['public'],
+      includedMetaData: false,
+      excludedMetaData: false,
       output: {
         manifest: true,
         log: false,
