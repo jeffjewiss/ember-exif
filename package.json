@@ -1,6 +1,6 @@
 {
   "name": "ember-exif",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Parse exif data from images and add it to the application as a importable module.",
   "directories": {
     "doc": "doc",
