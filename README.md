@@ -17,6 +17,8 @@ module.exports = function(defaults) {
   const app = new EmberApp(defaults, {
     exifOptions: {
       paths: ['public/photos'],
+      includedMetaData: ['FileName'], // can’t have both included and excluded
+      excludedMetaData: ['FileName'], // can’t have both included and excluded
       output: {
         log: true
       }
