@@ -27,7 +27,7 @@
   "author": "Jeff Jewiss <jeffjewiss@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "broccoli-funnel": "2.0.0",
+    "broccoli-funnel": "2.0.1",
     "broccoli-merge-trees": "2.0.0",
     "broccoli-plugin": "1.3.0",
     "dist-exiftool": "10.53.0",
