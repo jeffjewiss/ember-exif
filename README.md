@@ -1,7 +1,13 @@
-ember-exif
-==========
+<h1 align="center">Ember Exif</h1>
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jeffjewiss/ember-exif.svg)](https://greenkeeper.io/)
+<div align="center">
+  <a href="https://travis-ci.org/jeffjewiss/ember-exif"><img src="https://travis-ci.org/jeffjewiss/ember-exif.svg?branch=master" alt="Build Status"></a>
+  <a href="https://www.npmjs.com/package/ember-exif"><img src="https://img.shields.io/npm/v/ember-exif.svg" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/ember-exif"><img src="https://img.shields.io/npm/dm/ember-exif.svg" alt="Monthly Downloads"></a>
+  <a href="http://emberobserver.com/addons/ember-exif"><img src="http://emberobserver.com/badges/ember-exif.svg" alt="Ember Observer Score"></a>
+</div>
+
+<br>
 
 *This add-on is currently an experiment and under development.*
 
@@ -10,9 +16,8 @@ The goal of this add-on is to read the exif data from photos in your Ember app a
 Configuration
 -------------
 
-`ember-cli-build.js`
-
 ```javascript
+// ember-cli-build.js
 module.exports = function(defaults) {
   const app = new EmberApp(defaults, {
     exifOptions: {
