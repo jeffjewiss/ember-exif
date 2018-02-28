@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
-const getChannelURL = require('ember-source-channel-url');
+const getChannelURL = require('ember-source-channel-url')
 
-module.exports = function() {
+module.exports = function () {
   return Promise.all([
     getChannelURL('release'),
     getChannelURL('beta'),
-    getChannelURL('canary'),
+    getChannelURL('canary')
   ]).then((urls) => {
     return {
       scenarios: [
@@ -65,6 +65,6 @@ module.exports = function() {
           }
         }
       ]
-    };
-  });
-};
+    }
+  })
+}
