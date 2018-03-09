@@ -36,7 +36,15 @@ module.exports = {
   treeForApp () {
     let appTree = this.app.trees.app
     let existingPaths = this.getImagePaths()
-      .filter((path) => fs.existsSync(path))
+      .filter((path) => {
+        let stat
+        try {
+          stat = fs.statSync(path)
+          return stat && stat.isDirectory()
+        } catch (err) {
+          return false
+        }
+      })
 
     let imageNodes = existingPaths.map((path) => {
       return new BroccoliFunnel(path, {
