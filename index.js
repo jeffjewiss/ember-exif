@@ -1,7 +1,5 @@
 'use strict'
 
-const fs = require('fs')
-const path = require('path')
 const merge = require('merge')
 const mergeTrees = require('broccoli-merge-trees')
 const BroccoliFunnel = require('broccoli-funnel')
@@ -15,7 +13,7 @@ module.exports = {
 
     this.exifOptions = merge.recursive({}, {
       enabled: true,
-      paths: ['public'],
+      paths: [],
       includedMetaData: false,
       excludedMetaData: false,
       output: {
