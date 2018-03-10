@@ -38,12 +38,14 @@ module.exports = {
     let existingPaths = this.getImagePaths()
       .filter((path) => {
         let stat
+
         try {
           stat = fs.statSync(path)
-          return stat && stat.isDirectory()
         } catch (err) {
           return false
         }
+
+        return stat ? stat.isDirectory() : false
       })
 
     let imageNodes = existingPaths.map((path) => {
