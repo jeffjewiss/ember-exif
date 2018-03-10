@@ -1,6 +1,7 @@
 'use strict'
 
 const fs = require('fs')
+const path = require('path')
 const merge = require('merge')
 const mergeTrees = require('broccoli-merge-trees')
 const BroccoliFunnel = require('broccoli-funnel')
@@ -35,20 +36,7 @@ module.exports = {
 
   treeForApp () {
     let appTree = this.app.trees.app
-    let existingPaths = this.getImagePaths()
-      .filter((path) => {
-        let stat
-
-        try {
-          stat = fs.statSync(path)
-        } catch (err) {
-          return false
-        }
-
-        return stat ? stat.isDirectory() : false
-      })
-
-    let imageNodes = existingPaths.map((path) => {
+    let imageNodes = this.getImagePaths().map((path) => {
       return new BroccoliFunnel(path, {
         include: [
           '**.{jpg,jpeg,png,gif,webp}'
