@@ -15,7 +15,8 @@
     "lint:fix": "eslint app addon blueprints config server test-support tests *.js --fix"
   },
   "engines": {
-    "node": ">= 6.9"
+    "node": ">= 6.9",
+    "yarn": "YARN NO LONGER USED - use npm instead."
   },
   "repository": {
     "type": "git",
