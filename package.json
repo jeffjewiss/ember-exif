@@ -11,7 +11,7 @@
     "lint:js": "eslint ./*.js config lib tests",
     "lint:js:fix": "eslint ./*.js config tests --fix",
     "start": "ember serve",
-    "test": "npm run lint:js && ember try:each"
+    "test": "ember try:each"
   },
   "engines": {
     "node": ">= 6.9",

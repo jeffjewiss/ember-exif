@@ -44,5 +44,5 @@ install:
   - npm ci
 
 script:
-  - npm run lint
+  - npm run lint:js
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
