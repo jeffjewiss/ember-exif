@@ -8,11 +8,10 @@
   },
   "scripts": {
     "build": "ember build",
-    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
+    "lint:js": "eslint ./*.js config lib tests",
+    "lint:js:fix": "eslint ./*.js config tests --fix",
     "start": "ember serve",
-    "test": "ember try:each",
-    "lint": "eslint app addon blueprints config server test-support tests *.js",
-    "lint:fix": "eslint app addon blueprints config server test-support tests *.js --fix"
+    "test": "npm run lint:js && ember try:each"
   },
   "engines": {
     "node": ">= 6.9",
