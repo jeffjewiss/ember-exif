@@ -29,7 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "broccoli-funnel": "2.0.1",
-    "broccoli-merge-trees": "3.0.0",
+    "broccoli-merge-trees": "3.0.1",
     "broccoli-plugin": "1.3.0",
     "dist-exiftool": "10.53.0",
     "ember-cli-babel": "6.16.0",
