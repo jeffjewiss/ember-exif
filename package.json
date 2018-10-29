@@ -34,7 +34,7 @@
     "ember-cli-babel": "7.1.2",
     "lodash.omit": "4.5.0",
     "lodash.pick": "4.4.0",
-    "merge": "1.2.0",
+    "merge": "1.2.1",
     "node-exiftool": "2.3.0",
     "prettyjson": "1.2.1"
   },
